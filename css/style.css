@@ -1,0 +1,684 @@
+
+:root {
+    --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Nunito", sans-serif;
+    --nav-font: "Poppins", sans-serif;
+  }
+  
+  /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+  :root {
+    --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+    --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+    --heading-color: #012970; /* Color for headings, subheadings and title throughout the website */
+    --accent-color: #4154f1; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  }
+  
+  /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+  :root {
+    --orange-color: #fd7e14;
+    --cyan-color: #0dcaf0;
+    --green-color: #20c997;
+    --red-color: #df1529;
+    --indigo-color: #6610f2;
+    --pink-color: #f3268c;
+  
+    --nav-color: #012970; /* The default color of the main navmenu links */
+    --nav-hover-color: #4154f1; /* Applied to main navmenu links when they are hovered over or active */
+    --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+    --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+    --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
+    --nav-dropdown-hover-color: #4154f1; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  }
+  body{
+    overflow: hidden;
+  }
+  .loading{
+    z-index: 999;
+    background-color: #21252979;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loader {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 1s linear infinite
+  }
+  .loader::before , .loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid #FFF;
+    animation: prixClipFix 2s linear infinite ;
+  }
+  .loader::after{
+    transform: rotate3d(90, 90, 0, 180deg );
+    border-color: #FF3D00;
+  }
+
+  @keyframes rotate {
+    0%   {transform: rotate(0deg)}
+    100%   {transform: rotate(360deg)}
+  }
+
+  @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+  }
+  #btnUp{
+    position: fixed;
+    right: 30px;
+    bottom: 40px;
+  }
+nav{
+.navbar-brand{
+    font-size: 32px;
+    font-family: var(--heading-font);
+    color: var(--heading-color);
+}
+.nav-link{
+    font-family: var(--nav-font);
+    color: var(--nav-color);
+    font-size: 18px;
+}
+.active{
+    color: var(--accent-color) !important;
+}
+}
+
+  #home{
+    background-image: url(../imgs/hero-bg.png);
+    background-position: top center;
+    background-size: cover;
+  }
+  .inner h1{
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+  }
+ img.image{
+    animation: img 3s linear .5s infinite;
+  }
+  .watch a{
+color: var(--default-color);
+text-decoration: none;
+font-size: 22px;
+
+  }
+   i.iwatch{
+    padding-right: 5px;
+    font-size: 19px;
+    width: 30px;
+    height: 30px;
+    color: var(--accent-color);
+  border-radius: 50%;
+    border: 2px solid var(--accent-color);
+  }
+
+@keyframes img {
+  0%
+  {
+    transform:translateY(0px);
+}
+50%{
+  transform:translateY(25px);
+}
+100%{
+  transform:translateY(0px);
+}
+
+}
+section{
+  padding-block: 50px;
+}
+#about .about-content{
+  background-color: color-mix(in srgb, var(--accent-color), transparent 93%);
+  padding: 20px;
+}
+#about .about-content h2{
+color: var(--accent-color);
+font-size: 14px;
+font-weight: 600;
+font-family: var(--heading-font);
+}
+#about .about-content h3{
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+/* values */
+ .title h2 {
+  font-size: 15px;
+  padding: 10px;
+  color: var(--accent-color);
+  border-radius: 15px;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  
+}
+.title h3{
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-size: 25px;
+  font-weight: 700;
+}
+#values .value-content h3{
+  color: var(--heading-color);
+  margin: 0px;
+}
+#values .value-content img{
+  scale: .6;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: scale .5s;
+}
+#values .value-content img:hover{
+scale: .5;
+}
+/* count */
+#count .count-item{
+  padding: 20px;
+}
+#count .count-item i{
+  font-size: 40px;
+  color: var(--accent-color);
+}
+#count .count-content h3{
+color: var(--heading-color);
+font-weight: 700;
+font-size: 30px;
+}
+/* start feature */
+.feature-content{
+padding: 20px ;
+}
+.feature-content i{
+  width: 30px;
+  height: 30px;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  font-size: 25px;
+  padding: 4px;
+  border-radius: 3px;
+  color: var(--accent-color);
+  transition: all .5s;
+}
+.feature-content:hover i{
+  color: white;
+  background-color: var(--accent-color);
+}
+.feature-content h4{
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+/*  start altfeature */
+.altfeature-item i{
+  font-size: 30px;
+  color: var(--accent-color);
+}
+.altfeature-content h3{
+  color: var(--heading-color);
+  font-weight: 700;
+}
+/* services */
+#services .services-item {
+padding: 60px 50px;
+cursor: pointer;
+}
+#services .services-item h3{
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+  font-weight: 700;
+}
+#services .services-item a{
+  text-decoration: none;
+  font-size: 20px;
+}
+#services .services-item:hover a , #services .services-item:hover h3 , #services .services-item:hover p , #services .services-item:hover .icon i{
+color: white;
+
+}
+#services .icon i{
+  padding: 15px 20px;
+  font-size: 30px;
+ 
+}
+/* cyan */
+#services .services-item-cyan{
+  transition: all .5s;
+}
+#services .services-item-cyan:hover{
+  background-color:var(--cyan-color);
+}
+#services .services-item-cyan {
+  border-bottom: 3px solid var(--cyan-color);
+  }
+  #services .services-item-cyan a{
+color: var(--cyan-color);
+  }
+  #services .services-item-cyan .icon  i{
+    color: var(--cyan-color);
+    background-color: color-mix(in srgb, var(--cyan-color), transparent 80%);
+  }
+  #services .services-item-cyan:hover .icon  i{
+background-color: white;
+color: var(--cyan-color);
+  }
+/* orange */
+#services .services-item-orange{
+  transition: all .5s;
+}
+#services .services-item-orange:hover{
+  background-color:var(--orange-color);
+}
+#services .services-item-orange {
+  border-bottom: 3px solid var(--orange-color);
+  }
+  #services .services-item-orange a{
+color: var(--orange-color);
+  }
+  #services .services-item-orange .icon  i{
+    color: var(--orange-color);
+    background-color: color-mix(in srgb, var(--orange-color), transparent 80%);
+  }
+  #services .services-item-orange:hover .icon  i{
+background-color: white;
+color: var(--orange-color);
+  }
+/* green */
+#services .services-item-green{
+  transition: all .5s;
+}
+#services .services-item-green:hover{
+  background-color:var(--green-color);
+}
+#services .services-item-green {
+  border-bottom: 3px solid var(--green-color);
+  }
+  #services .services-item-green a{
+color: var(--green-color);
+  }
+  #services .services-item-green .icon  i{
+    color: var(--green-color);
+    background-color: color-mix(in srgb, var(--green-color), transparent 80%);
+  }
+  #services .services-item-green:hover .icon  i{
+background-color: white;
+color: var(--green-color);
+  }
+/* red */
+#services .services-item-red{
+  transition: all .5s;
+}
+#services .services-item-red:hover{
+  background-color:var(--red-color);
+}
+#services .services-item-red {
+  border-bottom: 3px solid var(--red-color);
+  }
+  #services .services-item-red a{
+color: var(--red-color);
+  }
+  #services .services-item-red .icon  i{
+    color: var(--red-color);
+    background-color: color-mix(in srgb, var(--red-color), transparent 80%);
+  }
+  #services .services-item-red:hover .icon  i{
+background-color: white;
+color: var(--red-color);
+  }
+  /* indigo */
+  #services .services-item-indigo{
+    transition: all .5s;
+  }
+  #services .services-item-indigo:hover{
+    background-color:var(--indigo-color);
+  }
+  #services .services-item-indigo {
+    border-bottom: 3px solid var(--indigo-color);
+    }
+    #services .services-item-indigo a{
+  color: var(--indigo-color);
+    }
+    #services .services-item-indigo .icon  i{
+      color: var(--indigo-color);
+      background-color: color-mix(in srgb, var(--indigo-color), transparent 80%);
+    }
+    #services .services-item-indigo:hover .icon  i{
+  background-color: white;
+  color: var(--indigo-color);
+    }
+    /* pink */
+    #services .services-item-pink{
+      transition: all .5s;
+    }
+    #services .services-item-pink:hover{
+      background-color:var(--pink-color);
+    }
+    #services .services-item-pink {
+      border-bottom: 3px solid var(--pink-color);
+      }
+      #services .services-item-pink a{
+    color: var(--pink-color);
+      }
+      #services .services-item-pink .icon  i{
+        color: var(--pink-color);
+        background-color: color-mix(in srgb, var(--pink-color), transparent 80%);
+      }
+      #services .services-item-pink:hover .icon  i{
+    background-color: white;
+    color: var(--pink-color);
+      }
+      /* start pricing */
+      #pricing .inner{
+        transition: all 0.5s;
+      }
+      #pricing .inner:hover{
+        scale: 1.1;
+      }
+      #pricing .inner .throu-p{
+        text-decoration: line-through;
+      }
+      #pricing .inner i{
+        font-size: 40px;
+        margin: 10px;
+      }
+/* green */
+      #pricing i.inner-green, #pricing h3.inner-green{
+        color: var(--green-color);
+        
+      }
+      #pricing i.inner-cyan, #pricing h3.inner-cyan{
+        color: var(--cyan-color);
+        
+      }
+      #pricing .send::after{
+content: "Featured ";
+position: absolute;
+background-color: var(--accent-color);
+width: 180px;
+height: 30px;
+color: white;
+top: 40px;
+right:-40px;
+bottom: -44px;
+transform: rotate(50deg);
+      }
+      /* orange */
+      #pricing i.inner-orange, #pricing h3.inner-orange{
+        color: var(--orange-color);
+        
+      }
+      /* accent color */
+      #pricing i.inner-accent, #pricing h3.inner-accent{
+        color: var(--accent-color);
+        
+      }
+      /* questions */
+      .accordion-button:not(.collapsed) {
+        background-color: transparent;
+        border-top: 0px;
+      }
+      /* protfolio */
+      
+      .nav-pills .nav-link.active{
+        background-color: transparent;
+        color: var(--accent-color);
+      
+      }
+      .nav-pills .nav-link{
+        color: black;
+        font-size: 20px;
+        transition: all .5s;
+        font-weight: 700;
+      }
+      .nav-pills .nav-link:hover{
+        color: var(--accent-color);
+      }
+      #protifolio .inner .overlay{
+        background-color: black;
+        opacity: 0;
+      transition: opacity .5s ;
+
+        }
+        #protifolio .inner:hover .overlay{
+         
+          opacity: .8; 
+        }
+        #protifolio .inner img{
+          transition: all .5s ; 
+        }
+        #protifolio .inner:hover img{
+          transform: scale(1.2);
+        }
+/* swiper */
+        .swiper {
+          width: 100%;
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
+    
+        .swiper-slide {
+          background-position: center;
+          background-size: cover;
+          width: 300px;
+          height: 300px;
+        }
+        .swiper-slide h4{
+          color: var(--heading-color);
+        }
+        /* team */
+        #team .content h3{
+      color: var(--heading-color);
+        }
+        #team .inner{
+          position: relative;
+          overflow: hidden;
+        }
+
+        #team .inner picture{
+          position: relative;
+          
+        }
+        #team .inner picture::after{
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 50px;
+          bottom: -160px;
+          left:0;
+          /* background-image: url(../imgs/wave.svg); */
+          background-repeat: repeat-x;
+        }
+        #team .inner img{
+          transition: all .5s;
+        }
+        #team .inner:hover img{
+          scale: 1.1;
+        }
+        .social-box{
+          position: absolute;
+          right: -100px;
+          top: 20px;
+          list-style: none;
+          background-color: color-mix(in srgb, var(--default-color), transparent 30%);
+          border-radius: 5px;
+          margin: 0;
+          padding: 0;
+          transition: right .5s .3s;
+        }
+        #team .inner:hover .social-box{
+          right: 10px;
+        }
+        .social-box i{
+          font-size: 20px;
+          padding: 10px;
+          color: white;
+          transition: all .5s;
+        }
+        .social-box i:hover{
+          color: var(--nav-dropdown-color);
+        }
+/* RECENT POSTS */
+        .posts .post-item {
+          background-color: var(--surface-color);
+          box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+          transition: 0.3s;
+        }
+        
+        .posts .post-item .post-img img {
+          transition: 0.5s;
+        }
+        
+        .posts .post-item .post-date {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          background-color: var(--accent-color);
+          color: var(--contrast-color);
+          text-transform: uppercase;
+          font-size: 13px;
+          padding: 6px 12px;
+          font-weight: 500;
+        }
+        
+        .posts .post-item .post-content {
+          padding: 30px;
+        }
+        
+        .posts .post-item .post-title {
+          color: var(--heading-color);
+          font-size: 20px;
+          font-weight: 700;
+          transition: 0.3s;
+          margin-bottom: 15px;
+        }
+        
+        .posts .post-item .meta i {
+          font-size: 16px;
+          color: var(--accent-color);
+        }
+        
+        .posts .post-item .meta span {
+          font-size: 15px;
+          color: color-mix(in srgb, var(--default-color), transparent 50%);
+        }
+        
+        .posts .post-item hr {
+          color: color-mix(in srgb, var(--default-color), transparent 80%);
+          margin: 20px 0;
+        }
+        
+        .posts .post-item .readmore {
+          display: flex;
+          align-items: center;
+          font-weight: 600;
+          line-height: 1;
+          transition: 0.3s;
+          color: color-mix(in srgb, var(--default-color), transparent 40%);
+        }
+        
+        .posts .post-item .readmore i {
+          line-height: 0;
+          margin-left: 6px;
+          font-size: 16px;
+        }
+        .posts .readmore{
+          text-decoration: none;
+        }
+        
+        .posts .post-item:hover .post-title,
+        .posts .post-item:hover .readmore {
+          color: var(--accent-color);
+        }
+        
+        .posts .post-item:hover .post-img img {
+          transform: scale(1.1);
+        }
+        /* contact */
+        .contact .info-item {
+          background: color-mix(in srgb, var(--default-color), transparent 96%);
+          padding: 30px;
+        }
+        
+        .contact .info-item i {
+          font-size: 38px;
+          line-height: 0;
+          color: var(--accent-color);
+        }
+        
+        .contact .info-item h3 {
+          font-size: 20px;
+          font-weight: 700;
+          margin: 20px 0 10px 0;
+        }
+        
+        .contact .info-item p {
+          padding: 0;
+          line-height: 24px;
+          font-size: 14px;
+          margin-bottom: 0;
+        }
+        .contact .email-form {
+          background: color-mix(in srgb, var(--default-color), transparent 96%);
+          padding: 30px;
+          height: 100%;
+        }
+        
+
+        .contact .email-form input[type=text]::placeholder,
+        .contact .email-form input[type=email]::placeholder,
+        .contact .email-form textarea::placeholder {
+          color: color-mix(in srgb, var(--default-color), transparent 70%);
+        }
+        /* footer */
+        .footer {
+          color: var(--default-color);
+          background-color: var(--background-color);
+          font-size: 14px;
+          padding-bottom: 50px;
+          position: relative;
+        }
+        
+        .footer .footer-newsletter {
+          background-color: color-mix(in srgb, var(--accent-color), transparent 97%);
+          border-top: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
+          border-bottom: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
+          padding: 50px 0;
+        }
+        
+        .footer .footer-newsletter h4 {
+          font-size: 24px;
+        }
+        
+        .footer .footer-newsletter .letter-form {
+          margin-top: 30px;
+          margin-bottom: 15px;
+          padding: 6px 8px;
+          position: relative;
+          background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+          border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+          box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+          display: flex;
+          transition: 0.3s;
+          border-radius: 4px;
+        }
+        .footer .footer-newsletter .letter-form input{
+          border: 0;
+        }
+        /* footer down */
+        .footerDown .sitename{
+          color: var(--heading-color);
+          font-family: var(--heading-font);
+        }
