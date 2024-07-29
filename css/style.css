@@ -95,7 +95,7 @@ nav{
     color: var(--nav-color);
     font-size: 18px;
 }
-.active{
+.navbar-nav .nav-link.active{
     color: var(--accent-color) !important;
 }
 }

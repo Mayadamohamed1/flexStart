@@ -21,12 +21,14 @@ $(   function(){
     })
 })
 $('#nav-item a[href^="#"]').on('click' , function(){
+    $('a').removeClass('active')
+    $(this).addClass('active')
     let aHref=$(this).attr('href')
     let sectionOffset= $(aHref).offset().top
-    $('html').animate({scrollTop: sectionOffset}, 1000)
+    $('html,body').animate({scrollTop: sectionOffset}, 1000)
 })
 $('#btnUp').on('click', function(){
-$('html').animate({scrollTop: 0 }, 1000)
+$('html,body').animate({scrollTop: 0 }, 1000)
 })
 var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
