@@ -23,6 +23,7 @@ $(   function(){
 $('#nav-item a[href^="#"]').on('click' , function(){
     $('a').removeClass('active')
     $(this).addClass('active')
+    
     let aHref=$(this).attr('href')
     let sectionOffset= $(aHref).offset().top
     $('html,body').animate({scrollTop: sectionOffset}, 1000)
