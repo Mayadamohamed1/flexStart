@@ -4,6 +4,9 @@
   padding: 0;
   
 }
+body{
+  scrollbar-width: none;
+}
 
 :root {
     --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
