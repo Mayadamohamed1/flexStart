@@ -66,3 +66,9 @@ var swiper = new Swiper(".mySwiper", {
         }
     }
 })
+$(function(){
+   $('section').css({"overflow-x": "hidden"});
+   $('#contactUs').css({"overflow-y": "hidden"});
+   $('.posts').css({"overflow-y": "hidden"}); 
+   $('#values').css({"overflow-y": "hidden"}); 
+});
