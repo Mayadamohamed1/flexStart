@@ -20,7 +20,7 @@ $(   function(){
         })
     })
 })
-$('#nav-item a[href^="#"]').on('click' , function(){
+$('.nav-item a[href^="#"]').on('click' , function(){
     $('a').removeClass('active')
     $(this).addClass('active')
     
